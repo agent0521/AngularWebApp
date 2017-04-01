@@ -42,7 +42,7 @@ app.controller('loginController', function($scope, $location, $rootScope){
 	};
 });
 
-app.controller('CalCtrl', function($scope) {
+app.controller('calculatorCTRL', function($scope) {
     $scope.output = "0";
     $scope.curIndex = 0;
     $scope.result = 0;
