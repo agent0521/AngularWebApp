@@ -7,7 +7,14 @@ app.config(function($routeProvider){
 	.when('/dashboard', {resolve: {"check" : function($location, $rootScope){
 				if(!$rootScope.loggedIn) {
 					$location.path('/');
-				} 
+				}
+				alert("****************************************************************\n" + 
+					  "-------------------------------------------------------------------\n\n\n" +
+					  "                                       Welcome                              \n" +
+					  "                                             to                                \n" + 
+					  "                                  Online Calculator                               \n\n\n\n" +
+					  "****************************************************************\n" + 
+					  "-------------------------------------------------------------------\n");
 			}
 		},
 		templateUrl: 'dashboard.html'
