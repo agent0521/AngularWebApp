@@ -1,0 +1,50 @@
+<div ng-controller="CalCtrl">
+	<div id="calc_background">
+        <table id="calcTable">
+            <tr>
+                <td colspan="4">
+                    <input id="res" value="{{output}}" disabled = "disabled">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button id="num1" ng-click="press('1')">1</button>
+                    <button id="num2" ng-click="press('2')">2</button>
+                    <button id="num3" ng-click="press('3')">3</button>
+                    <button id="addbtn" ng-click='operate("+")' >+</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button id="num4" ng-click="press('4')">4</button>
+                    <button id="num5" ng-click="press('5')">5</button>
+                    <button id="num6" ng-click="press('6')">6</button>
+                    <button id="subbtn" ng-click='operate("-")' >-</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button id="num7" ng-click="press('7')">7</button>
+                    <button id="num8" ng-click="press('8')">8</button>
+                    <button id="num9" ng-click="press('9')">9</button>
+                    <button id="multiplybtn" ng-click='operate("*")' >x</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="clearbtn" ng-click="output = '0'">C</button>
+                    <button id="num0" ng-click="press('0')">0</button>
+                    <button id="dotbtn" ng-click="press('.')">.</button>
+                    <button id="divisionbtn" ng-click='operate("/")' >÷</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="equalsbtn" ng-click="equal()">=</button>
+                    <button id="deletebtn" title="Delete" ng-click="press('x')">DEL</button>
+                </td>
+            </tr>
+        </table>
+			<span align="center" style="color:red">{{msg}}</span>
+    </div>
+</div>

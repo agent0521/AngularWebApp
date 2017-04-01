@@ -1,0 +1,17 @@
+<div ng-controller="loginController" class="loginBody">
+	<form id="myLogin">
+		<table class="logintable">
+			<tr>
+				<td>
+					<img src="img/Calculator.png" class="logo">
+				</td>
+				<td>
+					<p>Angu-lator Login</p>
+					<input type="text" id="username" ng-model="username" placeholder="username..." required><br>
+					<input type="password" id="password" ng-model="password" placeholder="password..." required><br><br>
+					<button ng-click="submit()" id="loginbutton">Login</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>

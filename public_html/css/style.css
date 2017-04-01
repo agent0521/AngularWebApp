@@ -1,0 +1,179 @@
+.logo{
+	width: 200px;
+	height: 250px;
+	margin-top: 10%;
+}
+.logintable{
+	margin-top: 9%;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#username{
+	font-size: 20px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#password{
+	font-size: 20px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#loginbutton{
+	font-size: 20px;
+	font-family: 'Baloo Bhaina', cursive;
+	width: 40%;
+	text-align: center;
+	margin-top: -8%;
+}
+.logintable p{
+	font-size: 30px;
+}
+.loginBody{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+#username{
+	margin-top: -15%;
+}
+#password{
+	margin-top: 2%;
+}
+/*
+ *************************************************************
+ *	These are the styling for the calculator application
+ *************************************************************
+*/
+
+#num1{
+	width:80px; 
+	height: 120px; 
+	font-size: 40px;
+}
+
+#num1{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num2{
+	width:150px; 
+	height: 110px;  
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num3{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#addbtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num4{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+
+#num5{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num6{
+	width:150px; 
+	height: 110px;  
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num7{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#subbtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num8{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+
+#num9{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#num0{
+	width:150px; 
+	height: 110px;  
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#clearbtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#dotbtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#divisionbtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#multiplybtn{
+	width:150px; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#equalsbtn{
+	width:72%; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#deletebtn{
+	width: 23%; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#res{
+	width: 95%; 
+	height: 80%; 
+	text-align: center;
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+#calc_background{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#calcTable{
+	width: 650px;
+	height: 700px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2%;
+}
