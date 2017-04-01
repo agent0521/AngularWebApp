@@ -54,7 +54,7 @@ app.controller('CalCtrl', function($scope) {
             var index = "+|-|*|/".indexOf($scope.output.charAt($scope.output.length - 1));
             if(index >= 0) {
                 tmp = false;
-                $scope.msg = "You only can do 1 formula per 1 time.";
+                $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
             }
             $scope.curIndex = $scope.output.length + 1;
         } else {
@@ -68,14 +68,14 @@ app.controller('CalCtrl', function($scope) {
                         }
                     }
                     if(k >= 1){
-                        $scope.msg = "You can't add '.' 2 times per series of numbers!";
+                        $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
                         tmp = false;
                     }
                 } else {
                     tmp = true;
                 }
             } else {
-                $scope.msg = "You can't input more than 10 number per series of numbers!";
+                $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
                 tmp = false;
             }
         }
@@ -118,7 +118,7 @@ app.controller('CalCtrl', function($scope) {
     $scope.equal = function() {
         var isOpEnd = "+|-|*|/".indexOf($scope.output.charAt($scope.output.length - 1));
         if(isOpEnd >= 0) {
-            $scope.msg = "You must complete the formula first!";
+            $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
         } else if(eval($scope.output) == 0){
             $scope.output = "0";
         } else {
