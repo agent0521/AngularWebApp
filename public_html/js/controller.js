@@ -20,7 +20,7 @@ app.controller('loginController', function($scope, $location, $rootScope){
 		var name = $scope.username;  //$rootscope
 		var pass = $scope.password;
 		
-		if(name =='idev' && pass == 'password'){
+		if(name =='a' && pass == 'a'){
 			$rootScope.loggedIn = true;
 			$location.path('/dashboard');
 		} 
