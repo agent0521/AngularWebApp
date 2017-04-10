@@ -1,24 +1,18 @@
-
 var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
-	$routeProvider
-	.when('/', {templateUrl:'login.html'})
-	.when('/dashboard', {resolve: {"check" : function($location, $rootScope){
-				if(!$rootScope.loggedIn) {
-					$location.path('/');
-				}
-				alert("****************************************************************\n" + 
-					  "-------------------------------------------------------------------\n\n\n" +
-					  "                                       Welcome                              \n" +
-					  "                                             to                                \n" + 
-					  "                                  Online Calculator                               \n\n\n\n" +
-					  "****************************************************************\n" + 
-					  "-------------------------------------------------------------------\n");
-			}
-		},
-		templateUrl: 'dashboard.html'
-	})
+	$routeProvider.when('/', {
+		templateUrl:'login.html'})
+			.when('/dashboard', {
+				resolve: {
+					"check" : function($location, $rootScope){
+						if(!$rootScope.loggedIn) {
+							$location.path('/');
+						}
+					}
+				},
+			templateUrl: 'dashboard.html'
+		})
 	.otherwise({ redirectTo: '/'});
 });
 
@@ -27,7 +21,7 @@ app.controller('loginController', function($scope, $location, $rootScope){
 		var name = $scope.username;  //$rootscope
 		var pass = $scope.password;
 		
-		if(name =='a' && pass == 'a'){
+		if(name == 'idev' && pass == 'password'){
 			$rootScope.loggedIn = true;
 			$location.path('/dashboard');
 		} 
@@ -44,10 +38,11 @@ app.controller('loginController', function($scope, $location, $rootScope){
 
 app.controller('calculatorCTRL', function($scope) {
     $scope.output = "0";
-    $scope.curIndex = 0;
+    $scope.currentIndex = 0;
     $scope.result = 0;
     
-    $scope.checkInput = function(num) {
+	
+	$scope.checkInput = function(num) {
         var tmp = true;
         if($scope.result != 0) {
             $scope.result = 0;
@@ -58,49 +53,26 @@ app.controller('calculatorCTRL', function($scope) {
             angular.equals('-', num) ||
             angular.equals('*', num) || 
             angular.equals('/', num)) {
+		
             var index = "+|-|*|/".indexOf($scope.output.charAt($scope.output.length - 1));
             if(index >= 0) {
                 tmp = false;
-                $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
+                $scope.output = "Syntax Error";
             }
-            $scope.curIndex = $scope.output.length + 1;
-        } else {
+            $scope.currentIndex = $scope.output.length + 1;
+        } 
+		else {
             tmp = true;
-            if($scope.output.substring($scope.curIndex).length < 10) {
-                if(angular.equals(num, ".")) {
-                    var k = 0;
-                    for(var j = 0; j < $scope.output.substring($scope.curIndex).length; j++){
-                        if(angular.equals(".", $scope.output.substring($scope.curIndex).charAt(j))) {
-                            k = k + 1;
-                        }
-                    }
-                    if(k >= 1){
-                        $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
-                        tmp = false;
-                    }
-                } else {
-                    tmp = true;
-                }
-            } else {
-                $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
-                tmp = false;
-            }
         }
         return tmp;
     }
-    
-    $scope.operate = function(op) {
-        if($scope.checkInput(op)) {
-            $scope.output = $scope.output + op;
-        }
-    }
-    
-    
-    $scope.press = function(num) {
+	
+	$scope.press = function(num) {
         if($scope.checkInput(num)) {
             if(angular.equals(num, 'x')){
                 $scope.output = $scope.output.slice(0 , $scope.output.length - 1);    
-            } else {
+            } 
+			else {
                 if (angular.equals($scope.output, "0")) {
                     $scope.output = "";
                     $scope.msg = "";
@@ -114,18 +86,25 @@ app.controller('calculatorCTRL', function($scope) {
                     $scope.output += num;
                 }
             }
-        } else {
+        } 
+		else {
             if(angular.equals(num, 'x')){
                 $scope.msg = "";
                 $scope.output = $scope.output.slice(0 , $scope.output.length - 1);    
             }
         }
     }
+	
+    $scope.operate = function(op) {
+        if($scope.checkInput(op)) {
+            $scope.output = $scope.output + op;
+        }
+    }
     
     $scope.equal = function() {
-        var isOpEnd = "+|-|*|/".indexOf($scope.output.charAt($scope.output.length - 1));
-        if(isOpEnd >= 0) {
-            $scope.msg = alert("INVALID ENTRY. PLEASE TRY AGAIN!");
+        var endIsOperator = "+|-|*|/".indexOf($scope.output.charAt($scope.output.length - 1));
+        if(endIsOperator >= 0) {
+            $scope.output = "Syntax Error";
         } else if(eval($scope.output) == 0){
             $scope.output = "0";
         } else {
@@ -134,4 +113,9 @@ app.controller('calculatorCTRL', function($scope) {
             $scope.output = $scope.result;
         }
     }
+	
+	$scope.logout = function () {
+		window.location = '/AngularWebApp/index.html';
+	};
+
 });

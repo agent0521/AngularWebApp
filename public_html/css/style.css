@@ -177,3 +177,10 @@
 	margin: 0 auto;
 	margin-top: 2%;
 }
+
+#logout{
+	width: 95%; 
+	height: 110px; 
+	font-size: 60px;
+	font-family: 'Baloo Bhaina', cursive;
+}
