@@ -2,6 +2,19 @@
 
 This is a simple Web App calculator with a login page. I used Angular JS, HTML and CSS to create the entire web application. 
 
+Check out my blog posts on my website and Medium.com account where I discussed a few topics about Angular JS:
+
+* Introduction to Angular JS
+  - https://viewmyweb.wordpress.com/2017/09/12/introduction-to-angular-js/
+* Brief Definition of the Most Frequently used Keywords in Angular JS
+  - https://viewmyweb.wordpress.com/2017/09/12/brief-definition-of-the-most-frequently-used-keywords-in-angular-js/
+* Angular JS: Online Calculator Part 1 — Login Page
+  - https://viewmyweb.wordpress.com/2017/09/12/brief-definition-of-the-most-frequently-used-keywords-in-angular-js/
+* Angular JS: Online Calculator Part 2
+  - https://medium.com/@floydalmazar/angular-js-online-calculator-part-2-50340f3fe0e8
+
+These blog posts contain explanation and walkthrough on how I created this web application. 
+
 ## Screenshots
 
 * ### Project Tree:  
